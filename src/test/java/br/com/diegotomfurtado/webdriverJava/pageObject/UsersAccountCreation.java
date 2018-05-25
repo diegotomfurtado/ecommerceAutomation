@@ -1,4 +1,4 @@
-package br.com.diegotomfurtado.webdriverJava.webdriverJava;
+package br.com.diegotomfurtado.webdriverJava.pageObject;
 
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Param;

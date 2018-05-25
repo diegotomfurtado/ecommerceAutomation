@@ -1,4 +1,4 @@
-package br.com.diegotomfurtado.webdriverJava.webdriverJava;
+package br.com.diegotomfurtado.webdriverJava.pageObject;
 
 import static org.junit.Assert.assertEquals;
 
