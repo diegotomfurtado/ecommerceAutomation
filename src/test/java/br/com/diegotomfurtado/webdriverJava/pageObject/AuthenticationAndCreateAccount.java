@@ -30,13 +30,13 @@ public class AuthenticationAndCreateAccount {
 			@Param(name = "passwd") String password, 
 			@Param(name = "user") String user) {
 
-		String validUserLogged = new LoginPage(browser)
+		String ValidateUsersCredentials = new LoginPage(browser)
 			.clickSignIn()
 			.typeLogin(login)
 			.typePassword(password)
 			.clickSubmitLogin()
 			.ct_001_ValidateUsersCredentials();
-		assertEquals(user,validUserLogged);
+		assertEquals(user,ValidateUsersCredentials);
 		browser.quit();
 	}
 
@@ -46,12 +46,13 @@ public class AuthenticationAndCreateAccount {
 			@Param (name = "passwd")String password,
 			@Param (name = "user") String user){
 		
-		new LoginPage(browser)
-		.clickSignIn()
-		.typeLogin(login)
-		.typePassword(password)
-		.clickSubmitLogin()
-		.ct_002_InvalidEmailsCredentials(user);
+		String InvalidEmailsCredentials = new LoginPage(browser)
+			.clickSignIn()
+			.typeLogin(login)
+			.typePassword(password)
+			.clickSubmitLogin()
+			.ct_002_InvalidEmailsCredentials();
+		assertEquals(user, InvalidEmailsCredentials);
 		
 		browser.quit();
 	}
@@ -62,12 +63,13 @@ public class AuthenticationAndCreateAccount {
 			@Param (name = "passwd")String password,
 			@Param (name = "user") String user){
 		
-		new LoginPage(browser)
-		.clickSignIn()
-		.typeLogin(login)
-		.typePassword(password)
-		.clickSubmitLogin()
-		.ct_003_InvalidPasswordsCredentials(user);
+		String InvalidPasswordsCredentials = new LoginPage(browser)
+			.clickSignIn()
+			.typeLogin(login)
+			.typePassword(password)
+			.clickSubmitLogin()
+			.ct_003_InvalidPasswordsCredentials();
+		assertEquals(user, InvalidPasswordsCredentials);
 		
 		browser.quit();
 	}
@@ -78,12 +80,13 @@ public class AuthenticationAndCreateAccount {
 			@Param (name = "passwd")String password,
 			@Param (name = "user") String user){
 		
-		new LoginPage(browser)
-		.clickSignIn()
-		.typeLogin(login)
-		.typePassword(password)
-		.clickSubmitLogin()
-		.ct_004_ValidateAuthenticationUsersCredentials(user);
+		String ValidateAuthenticationUsersCredentials = new LoginPage(browser)
+			.clickSignIn()
+			.typeLogin(login)
+			.typePassword(password)
+			.clickSubmitLogin()
+			.ct_004_ValidateAuthenticationUsersCredentials();
+		assertEquals(user, ValidateAuthenticationUsersCredentials);
 		
 		browser.quit();
 	}
