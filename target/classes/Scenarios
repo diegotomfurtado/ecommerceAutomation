@@ -1,0 +1,42 @@
+### The security of users' information ###
+
+	# Validate a user's credentials #
+	
+	CT 001 - Validate a user's credentials with valid login and valid password;
+	CT 002 - Validate a user's credentials with valid login and invalid password;
+	CT 003 - Validate a user's credentials with invalid login and valid password;
+	CT 004 - Validate a user's authentication credentials with invalid login and invalid password;
+	
+	Validate if after change the password a user will  
+	CT 005 - Validar se mudança de senha do usuário cadastrado na base irá permitir novos acessos.
+	CT 006 - Validar se usuário removido continua com acesso
+	CT 007 - Verificar se remoção de usuário na base é de forma lógica ou física
+	CT 008 - Verificar a possibilidade de haver mais de uma usuário igual
+
+
+
+
+A segurança de informações de seus usuários{
+
+    Validar o acesso dos usuários{    
+        Validar acesso ao sistema com usuário cadastrado na base{
+        
+			CT 001 - Validate a user's credentials with invalid login and valid password;
+			CT 002 - Validate a user's credentials with valid login and invalid password;
+			CT 003 - Validate a user's credentials with invalid login and valid password;
+			CT 004 - Validate a user's credentials with invalid login and invalid password;
+        
+            Validar se mudança de senha do usuário cadastrado na base irá permitir novos acessos.
+            Validar se usuário removido continua com acesso
+            Verificar se remoção de usuário na base é de forma lógica ou física
+            Verificar a possibilidade de haver mais de uma usuário igual
+        
+        }
+        Validar acesso com usuário não cadastrado na base
+    
+    Validar os acessos forçados{
+        SQL Injection
+        Acessos a partir do token inválidos (ou expirados)
+        Verificar se após o login com sucesso, usuário possa dar o backspace (ou logout) sem perder o token
+    }
+    Validar o tempo de expiração do token
