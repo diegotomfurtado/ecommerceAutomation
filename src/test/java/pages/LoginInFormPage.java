@@ -1,5 +1,7 @@
 package pages;
 
+import static org.openqa.selenium.By.id;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,30 +13,30 @@ public class LoginInFormPage extends BasePages{
 	}
 
 	public LoginInFormPage typeLogin(String login) {
-		browser.findElement(By.id("login_form")).findElement(By.id("email"))
+		browser.findElement(id("login_form")).findElement(By.id("email"))
 				.sendKeys(login);
 		return this;
 	}
 
 	public LoginInFormPage typePassword(String password) {
-		browser.findElement(By.id("login_form")).findElement(By.id("passwd"))
+		browser.findElement(id("login_form")).findElement(By.id("passwd"))
 				.sendKeys(password);
 		return this;
 	}
 
 	public LoginInFormPage typeNewEmail(String email_create) {
-		browser.findElement(By.id("create-account_form"))
-				.findElement(By.id("email_create")).sendKeys(email_create);
+		browser.findElement(id("create-account_form"))
+				.findElement(id("email_create")).sendKeys(email_create);
 		return this;
 	}
 
 	public MyAccountPage clickSubmitLogin() {
-		browser.findElement(By.id("SubmitLogin")).click();
+		browser.findElement(id("SubmitLogin")).click();
 		return new MyAccountPage(browser);
 	}
 
 	public FormToCreateAPersonalInformationPage clickSubmitCreateNewAccont() {
-		browser.findElement(By.id("SubmitCreate")).click();
+		browser.findElement(id("SubmitCreate")).click();
 		return new FormToCreateAPersonalInformationPage(browser);
 	}
 }

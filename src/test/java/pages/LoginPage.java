@@ -1,5 +1,7 @@
 package pages;
 
+import static org.openqa.selenium.By.linkText;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,7 +13,7 @@ public class LoginPage extends BasePages{
 	}
 
 	public LoginInFormPage clickSignIn() {
-		browser.findElement(By.linkText("Sign in")).click();
+		browser.findElement(linkText("Sign in")).click();
 		return new LoginInFormPage(browser);
 	}
 }
