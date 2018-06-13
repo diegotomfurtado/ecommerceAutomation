@@ -59,6 +59,7 @@ public class UsersAccountCreation {
 		.chooseStaticStateName()
 		.typePhoneMobileNumber(phone_mobile)
 		.typeAlias(alias)
-		.clickToCreateNewAccount();
+		.clickToCreateNewAccount()
+		.validateAuthenticationUsersCredentials();
 	}
 }

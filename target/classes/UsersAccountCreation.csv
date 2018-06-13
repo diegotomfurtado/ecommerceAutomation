@@ -1,2 +1,2 @@
-createUserAccount, email_creat,customer_firstname,customer_lastname,passwd,firstname,lastname,company,address1,address2,city,postcode,phone_mobile,alias
-		,diegotomfurtado@gmail.com, Diego, Santos, 12345678,Diego,Santos,Anyone,NoAdress01,NoAdress02,Vancouver,000123,8198765421,Tomato
+createUserAccount,email_create,customer_firstname,customer_lastname,passwd,firstname,lastname,company,address1,address2,city,postcode,phone_mobile,alias,Duration(ms)
+"",diegotomfurtado_03@gmail.com,Diego,Santos,12345678,Diego,Santos,Anyone,NoAdress01,NoAdress02,Vancouver,00123,8198765421,Tomato,18072.0

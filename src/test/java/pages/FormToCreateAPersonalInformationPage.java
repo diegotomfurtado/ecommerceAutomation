@@ -1,6 +1,7 @@
 package pages;
 
 import static org.openqa.selenium.By.id;
+import static org.openqa.selenium.By.xpath;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +26,7 @@ public class FormToCreateAPersonalInformationPage extends BasePages {
 	public FormToCreateAPersonalInformationPage typeCustomerFirstName(
 			String customer_firstname) {
 		browser.findElement(accountCreationFormLocator)
-				.findElement(id(customer_firstname))
+				.findElement(By.id("customer_firstname"))
 				.sendKeys(customer_firstname);
 		return this;
 	}
@@ -40,8 +41,7 @@ public class FormToCreateAPersonalInformationPage extends BasePages {
 
 	public FormToCreateAPersonalInformationPage typeNewPassword(String passwd) {
 		browser.findElement(accountCreationFormLocator)
-				.findElement(id("passwd"))
-				.sendKeys(passwd);
+				.findElement(id("passwd")).sendKeys(passwd);
 		return this;
 	}
 
@@ -98,8 +98,8 @@ public class FormToCreateAPersonalInformationPage extends BasePages {
 	}
 
 	public FormToCreateAPersonalInformationPage typeCityName(String city) {
-		browser.findElement(accountCreationFormLocator)
-				.findElement(id("city")).sendKeys(city);
+		browser.findElement(accountCreationFormLocator).findElement(id("city"))
+				.sendKeys(city);
 		return this;
 	}
 
@@ -128,9 +128,9 @@ public class FormToCreateAPersonalInformationPage extends BasePages {
 		return this;
 	}
 
-	public FormToCreateAPersonalInformationPage clickToCreateNewAccount() {
+	public MyAccountPage clickToCreateNewAccount() {
 		browser.findElement(accountCreationFormLocator)
 				.findElement(id("submitAccount")).click();
-		return this;
+		return new MyAccountPage(browser);
 	}
 }
