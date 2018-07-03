@@ -51,7 +51,7 @@ public class AuthenticationAndCreateAccount {
 			.typeLogin(login)
 			.typePassword(password)
 			.clickSubmitLogin()
-			.ShouldNotLoginWithWrongEmailsCredentials();
+			.shouldNotLoginWithWrongEmailsCredentials();
 		assertEquals(user, returnUserCredential);
 		
 		browser.quit();
@@ -68,7 +68,7 @@ public class AuthenticationAndCreateAccount {
 			.typeLogin(login)
 			.typePassword(password)
 			.clickSubmitLogin()
-			.ShouldNotLoginWithWrongPasswordCredentials();
+			.shouldNotLoginWithWrongPasswordCredentials();
 		assertEquals(user, returnUserCredential);
 		
 		browser.quit();

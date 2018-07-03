@@ -23,11 +23,11 @@ public class MyAccountPage extends BasePages {
 		return browser.findElement(validateUsersCredentials).getText();
 	}
 
-	public String ShouldNotLoginWithWrongEmailsCredentials() {
+	public String shouldNotLoginWithWrongEmailsCredentials() {
 		return browser.findElement(invalidEmailsCredentials).getText();
 	}
 
-	public String ShouldNotLoginWithWrongPasswordCredentials() {
+	public String shouldNotLoginWithWrongPasswordCredentials() {
 		return browser.findElement(checkErroMessageAuthentication).getText();
 	}
 
