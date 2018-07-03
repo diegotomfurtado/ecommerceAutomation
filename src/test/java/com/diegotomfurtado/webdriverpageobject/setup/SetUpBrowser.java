@@ -1,4 +1,4 @@
-package setUp;
+package com.diegotomfurtado.webdriverpageobject.setup;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;

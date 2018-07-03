@@ -1,4 +1,4 @@
-package setUp;
+package com.diegotomfurtado.webdriverpageobject.setup;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;

@@ -1,11 +1,11 @@
-package TestSuites;
+package com.diegotomfurtado.webdriverpageobject.testsuites;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import br.com.diegotomfurtado.webdriverJava.pageObject.AuthenticationAndCreateAccount;
-import br.com.diegotomfurtado.webdriverJava.pageObject.UsersAccountCreation;
+import com.diegotomfurtado.webdriverpageobject.testexecution.AuthenticationAndCreateAccount;
+import com.diegotomfurtado.webdriverpageobject.testexecution.UsersAccountCreation;
 
 @RunWith(Suite.class)
 @SuiteClasses({ 

@@ -1,4 +1,4 @@
-package br.com.diegotomfurtado.webdriverJava.pageObject;
+package com.diegotomfurtado.webdriverpageobject.testexecution;
 
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Param;
@@ -8,20 +8,20 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import pages.LoginPage;
-import setUp.SetUpBrowser;
+import com.diegotomfurtado.webdriverpageobject.pages.LoginPage;
+import com.diegotomfurtado.webdriverpageobject.setup.SetUpBrowser;
 
 @RunWith(DataDrivenTestRunner.class)
 @DataLoader(filePaths = "UsersAccountCreation.csv")
 public class UsersAccountCreation {
-	
+
 	private WebDriver browser;
-	
+
 	@Before
 	public void setUpOpenBrowser() {
 		browser = SetUpBrowser.setUpBrowser();
 	}
-	
+
 	@Test
 	public void createUserAccount(
 			@Param(name = "email_create") String email_create,
@@ -38,28 +38,27 @@ public class UsersAccountCreation {
 			@Param(name = "phone_mobile") String phone_mobile,
 			@Param(name = "alias") String alias) {
 
-		new LoginPage(browser)
-		.clickSignIn()
-		.typeNewEmail(email_create)
-		.clickSubmitCreateNewAccont()
-		.chooseTitleMrsOrMrs()
-		.typeCustomerFirstName(customer_firstname)
-		.typeCustomerLastName(customer_lastname)
-		.typeNewPassword(passwd)
-		.chooseStaticDay()
-		.chooseStaticMonth()
-		.chooseStaticYear()
-		.typeFirstNameToAdress(firstname)
-		.typeLastNameToAdress(lastname)
-		.typeCompanyName(company)
-		.typeAdressNumberOne(address1)
-		.typeAdressNumberTwo(address2)
-		.typeCityName(city)
-		.typePostCode(postcode)
-		.chooseStaticStateName()
-		.typePhoneMobileNumber(phone_mobile)
-		.typeAlias(alias)
-		.clickToCreateNewAccount()
-		.validateAuthenticationUsersCredentials();
+		new LoginPage(browser).clickSignIn()
+			.typeNewEmail(email_create)
+			.clickSubmitCreateNewAccont()
+			.chooseTitleMrsOrMrs()
+			.typeCustomerFirstName(customer_firstname)
+			.typeCustomerLastName(customer_lastname)
+			.typeNewPassword(passwd)
+			.chooseStaticDay()
+			.chooseStaticMonth()
+			.chooseStaticYear()
+			.typeFirstNameToAdress(firstname)
+			.typeLastNameToAdress(lastname)
+			.typeCompanyName(company)
+			.typeAdressNumberOne(address1)
+			.typeAdressNumberTwo(address2)
+			.typeCityName(city)
+			.typePostCode(postcode)
+			.chooseStaticStateName()
+			.typePhoneMobileNumber(phone_mobile)
+			.typeAlias(alias)
+			.clickToCreateNewAccount()
+			.validateAuthenticationUsersCredentials();
 	}
 }

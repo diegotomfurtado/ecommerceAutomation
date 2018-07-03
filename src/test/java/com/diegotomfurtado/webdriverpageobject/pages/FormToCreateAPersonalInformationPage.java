@@ -1,7 +1,6 @@
-package pages;
+package com.diegotomfurtado.webdriverpageobject.pages;
 
 import static org.openqa.selenium.By.id;
-import static org.openqa.selenium.By.xpath;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +14,7 @@ public class FormToCreateAPersonalInformationPage extends BasePages {
 		// TODO Auto-generated constructor stub
 	}
 
-	By accountCreationFormLocator = id("account-creation_form");
+	private static final By accountCreationFormLocator = id("account-creation_form");
 
 	public FormToCreateAPersonalInformationPage chooseTitleMrsOrMrs() {
 		browser.findElement(id("account-creation_form"))
@@ -26,7 +25,7 @@ public class FormToCreateAPersonalInformationPage extends BasePages {
 	public FormToCreateAPersonalInformationPage typeCustomerFirstName(
 			String customer_firstname) {
 		browser.findElement(accountCreationFormLocator)
-				.findElement(By.id("customer_firstname"))
+				.findElement(id("customer_firstname"))
 				.sendKeys(customer_firstname);
 		return this;
 	}
@@ -47,19 +46,19 @@ public class FormToCreateAPersonalInformationPage extends BasePages {
 
 	public FormToCreateAPersonalInformationPage chooseStaticDay() {
 		WebElement campoTypeDays = browser.findElement(id("days"));
-		new Select(campoTypeDays).selectByVisibleText("8  ");
+		new Select(campoTypeDays).selectByIndex(8);
 		return this;
 	}
 
 	public FormToCreateAPersonalInformationPage chooseStaticMonth() {
 		WebElement campoTypeDays = browser.findElement(id("months"));
-		new Select(campoTypeDays).selectByVisibleText("April ");
+		new Select(campoTypeDays).selectByIndex(4);
 		return this;
 	}
 
 	public FormToCreateAPersonalInformationPage chooseStaticYear() {
 		WebElement campoTypeDays = browser.findElement(id("years"));
-		new Select(campoTypeDays).selectByVisibleText("1987  ");
+		new Select(campoTypeDays).selectByIndex(32);
 		return this;
 	}
 
@@ -111,7 +110,7 @@ public class FormToCreateAPersonalInformationPage extends BasePages {
 
 	public FormToCreateAPersonalInformationPage chooseStaticStateName() {
 		WebElement campoTypeDays = browser.findElement(id("id_state"));
-		new Select(campoTypeDays).selectByVisibleText("Alaska");
+		new Select(campoTypeDays).selectByIndex(3);
 		return this;
 	}
 
@@ -133,4 +132,5 @@ public class FormToCreateAPersonalInformationPage extends BasePages {
 				.findElement(id("submitAccount")).click();
 		return new MyAccountPage(browser);
 	}
+
 }

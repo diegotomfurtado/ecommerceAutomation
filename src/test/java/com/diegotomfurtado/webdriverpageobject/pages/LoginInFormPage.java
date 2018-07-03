@@ -1,4 +1,4 @@
-package pages;
+package com.diegotomfurtado.webdriverpageobject.pages;
 
 import static org.openqa.selenium.By.id;
 

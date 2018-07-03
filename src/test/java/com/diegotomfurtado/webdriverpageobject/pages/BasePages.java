@@ -1,4 +1,4 @@
-package pages;
+package com.diegotomfurtado.webdriverpageobject.pages;
 
 import org.openqa.selenium.WebDriver;
 
