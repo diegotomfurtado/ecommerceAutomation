@@ -6,15 +6,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SetUpBrowser {
 	
+	static final String URL = "http://automationpractice.com/index.php";
+	
 	public static WebDriver setUpBrowser() {
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Drivers\\DrivesAutomations\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver",
+//				"C:\\Drivers\\DrivesAutomations\\chromedriver.exe");
 
 		WebDriver browser = new ChromeDriver();
 		browser.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
-		browser.get("http://automationpractice.com/index.php");
+		browser.get(URL);
 		return browser;
 	}
 }
